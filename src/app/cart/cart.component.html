@@ -1,0 +1,43 @@
+<div class="order-card">
+  @if (inCart.length === 0) {
+    <div class="empty-cart">
+      <img style="margin-left: 90px; margin-right: 90px; margin-top: 30px; width: 40%;" src="https://constant.myntassets.com/checkout/assets/img/empty-bag.webp">
+      <p class="primary-line">Hey, it feels so light!</p>
+      <p class="secondary-line">There is nothing in your bag. Let's add some items.</p>
+
+      <div style="display: flex; justify-content: center; margin-top: 10px;">
+        <button class="go-to-home-button" (click)="redirectToHome()">ADD ITEMS</button>
+      </div>
+    </div>
+  } 
+  
+  @else {
+    <div class="head-div">
+      <p class="head">Your orders</p>
+    </div>
+  
+    <div class="orders">
+      <div>
+        <div class="address-div">
+          <p>Delivered to: <b>Michael</b></p>
+          <p>{{ userAddress }}</p>
+          <button class="change-address">CHANGE ADDRESS</button>
+        </div>
+        
+        <div class="added-product">
+          @for (item of inCart; track item.id; let i = $index) {
+            @defer {
+              <app-cart-item [item]="i"></app-cart-item>
+            } @placeholder {
+              <p></p>
+            } @loading (minimum 0.5s) {
+              <p>Loading...</p>
+            }
+          }
+        </div>
+      </div>
+  
+        <app-price-details />
+    </div>
+  }
+</div>

@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="m-icon-div" (click)="goToHome()">
+    <img class="m-icon" src="https://aartisto.com/wp-content/uploads/2020/11/myntra-1200x675.png" alt="Myntra">
+  </div>
+
+  <div class="categories">
+    <button class="categories-button">MEN</button>
+    <button class="categories-button">WOMEN</button>
+    <button class="categories-button">KIDS</button>
+    <button class="categories-button" style="width: 100px">HOME & LIVING</button>
+    <button class="categories-button">BEAUTY</button>
+    <button class="categories-button">STUDIO</button>
+  </div>
+
+  <div class="search-bar-div">
+    <input class="search-bar" type="text" placeholder="Search for products, brands and more" [(ngModel)]="search_val">
+  </div>
+
+  <div class="right-section">
+    <div class="profile-div">
+      <button class="wishlist-button" (click)="goToWishlist()">
+        <img class="wishlist" src="https://cdn-icons-png.flaticon.com/512/58/58746.png">
+        <p class="wishlist-p">Wishlist</p>
+      </button>
+    </div>
+    <div class="profile-div">
+      <button class="bag-button" matBadgeOverlap="true" (click)="onCartOpen()" matBadge="8" matBadgePosition="after" matBadge="{{ cartService.cart().length }}" matBadgeColor="warn">
+        <img class="bag-icon" src="https://cdn-icons-png.flaticon.com/512/2662/2662503.png">
+        <p class="user-p">Bag</p>
+      </button>
+    </div>
+    
+    <div class="profile-div">
+      <button (click)="goToProfile()" class="user-button">
+        <img class="user" src="https://cdn-icons-png.flaticon.com/512/748/748128.png">
+        <p class="user-p">Profile</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

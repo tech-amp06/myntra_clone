@@ -1,0 +1,47 @@
+<div class="order-total">
+  <div>
+    <p style="font-family: Roboto; font-size: 12px; font-weight: bold; color: rgb(73, 73, 73);">SUPPORT TRANSFORMATIVE SOCIAL WORK</p>
+
+    <p style="font-family: Roboto; font-size: 12px; font-weight: bold;">Donate and make a difference</p>
+
+    <div style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: rgb(203, 203, 203);">
+      <button [style]="styles" id="btn_10" (click)="handleDonation(10, 'btn_10')">₹10</button>
+      <button [style]="styles" id="btn_20" (click)="handleDonation(20, 'btn_20')">₹20</button>
+      <button [style]="styles" id="btn_50" (click)="handleDonation(50, 'btn_50')">₹50</button>
+      <button [style]="styles" id="btn_100" (click)="handleDonation(100, 'btn_100')">₹100</button>
+    </div>
+  </div>
+  
+  <p class="price-details">PRICE DETAILS ({{ inCart.length }} items)</p>
+  <div class="invoice">
+    <div class="key">
+      <p class="invoice-details">Total MRP</p>
+      <p class="invoice-details">Discount on MRP</p>
+      <p class="invoice-details">Platform Fee</p>
+      <p class="invoice-details">Shipping Fee</p>
+      <p class="invoice-details">Social Work Donation</p>
+    </div>
+    <div class="value">
+      <p class="invoice-details"><b>₹{{ cartService.totalPrice }}</b></p>
+      <p class="discount"><b>-₹{{ cartService.discount | number: '1.0-0' }}</b></p>
+      <p class="invoice-details"><b>₹{{ cartService.platformFee }}</b></p>
+      @if (cartService.shippingFee == 0) {
+        <p class="free">FREE</p>
+      } @else {
+        <p class="shipping"><b>₹{{ cartService.shippingFee | number: '1.0-0' }}</b></p>
+      }
+      <p class="invoice-details"><b>₹{{ cartService.donationAmount }}</b></p>
+    </div>
+  </div>
+
+  <div class="final">
+    <div class="total-div">
+      <p class="total">Total Amount</p>
+    </div>
+    <div class="gross-div">
+      <p class="gross">₹{{ cartService.gross | number: '1.0-0' }}</p>
+    </div>
+  </div>
+  
+  <button class="place-order">PLACE ORDER</button>
+</div>

@@ -1,0 +1,17 @@
+<div class="item" (click)="redirectToProduct()">
+  <img class="image" src="{{ product.hlink[0] }}">
+  <p class="brand">{{ product.brand }}</p>
+  <p class="type">{{ product.type }}</p>
+  <p class="price">Rs. {{ product.price }}</p>
+  
+  @if (product.stock > 0) {
+    <p class="stock">{{ product.stock }} left in stock</p>
+  } @else {
+    <p class="out-stock">Out of Stock</p>
+  }
+  <!-- <div class="add-button">
+    <button class="add" (click)="addToCart(i)">
+      +
+    </button>
+  </div> -->
+</div>

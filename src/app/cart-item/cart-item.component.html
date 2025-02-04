@@ -1,0 +1,40 @@
+<div class="order">
+  <div class="order-image-div" (click)="redirectToProduct()">
+    <img class="order-image" src="{{ inCart[item].hlink[0] }}">
+  </div>
+  
+  <div class="description">
+    <div>
+      <p class="brand">{{ inCart[item].brand }}</p>
+      <p class="type">{{ inCart[item].type }}</p>
+      <p class="price">Rs. {{ inCart[item].price }}</p>
+      <p class="return">&#x21A9; 14 days return available</p>
+    </div>
+
+    <div>
+      <mat-form-field class="size-forms">
+        <mat-label class="size-forms-label">
+          Size: <span class="size-selected">{{ inCart[item].size }}</span>
+        </mat-label>
+        <mat-select>
+          <mat-option class="mat-option-style" value="one" (click)="inCart[item].size = 'XS'">XS</mat-option>
+          <mat-option class="mat-option-style" value="two" (click)="inCart[item].size = 'S'">S</mat-option>
+          <mat-option class="mat-option-style" value="three" (click)="inCart[item].size = 'M'">M</mat-option>
+          <mat-option class="mat-option-style" value="four" (click)="inCart[item].size = 'L'">L</mat-option>
+          <mat-option class="mat-option-style" value="five" (click)="inCart[item].size = 'XL'">XL</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <p style="display: inline-block;">
+          Qty: {{ itemQuantity }}
+        </p>
+        <button (click)="itemQuantity = itemQuantity + 1">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="remove">
+    <button class="remove-button" (click)="cartService.removeFromCart(inCart[item].id)">&#10005;</button>
+  </div>
+</div>

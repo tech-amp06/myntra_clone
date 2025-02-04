@@ -1,0 +1,103 @@
+.order {
+  height: 150px;
+  width: 90%;
+  margin: 20px;
+  border-style: solid;
+  border-color: rgb(217, 217, 217);
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 112px 1fr 20px;
+}
+.order:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.order-image {
+  width: 100%;
+}
+
+.order-image-div {
+  height: 100%;
+}
+
+.description {
+  vertical-align: top;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.return {
+  margin: 10px;
+  color: grey;
+  font-size: 12px;
+}
+
+.dealer {
+  font-size: 10px;
+  color: grey;
+  margin: 10px;
+}
+
+.size {
+  display: inline-block;
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(101, 101, 101);
+  background-color: rgb(237, 237, 237);
+  border: none;
+  border-radius: 2px;
+}
+
+.size-forms {
+  font-size: 12px !important;
+  min-height: 30px !important;
+  width: 100px;
+}
+
+.size-forms .mat-mdc-text-field-wrapper {
+  padding: 2px !important;
+}
+
+.size-forms .mat-mdc-form-field-flex {
+  min-height: 30px !important;
+}
+
+.size-forms .mat-mdc-form-field-infix {
+  padding: 2px 8px !important;
+  min-height: 30px !important;
+}
+
+.mat-option-style {
+  font-size: 12px !important;
+  width: 100px;
+  background-color: grey;
+  opacity: 1;
+  min-width: 0;
+}
+
+.return {
+  vertical-align: top;
+  top: 8px;
+}
+
+.remove-button {
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(255, 85, 113);
+}
+.remove-button:hover {
+  cursor: pointer;
+}

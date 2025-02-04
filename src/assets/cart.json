@@ -1,0 +1,33 @@
+[
+  { 
+    "id": 7,
+    "hlink": ["https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/26331770/2024/2/1/05f7916e-fb4b-45ef-9dae-756f4023fd4e1706783646754-Moda-Rapido-Men-Tshirts-4091706783646387-1.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/26331770/2024/2/1/a193c251-4957-4522-b6a8-28f582deb3511706783646745-Moda-Rapido-Men-Tshirts-4091706783646387-2.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/26331770/2024/2/1/112cd5ea-fb0b-456b-8aba-decf94645cb31706783646736-Moda-Rapido-Men-Tshirts-4091706783646387-3.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/26331770/2024/2/1/aca6375d-11a8-4386-87e8-217b57f075c91706783646717-Moda-Rapido-Men-Tshirts-4091706783646387-5.jpg"],
+    "brand": "MODA RAPIDO",
+    "type": "Typography Printed Pure Cotton",
+    "price": 379,
+    "stock": 7,
+    "sex": "M",
+    "dealer": "MAITRI KNITWEAR"
+  },
+  { 
+    "id": 4,
+    "hlink": ["https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/11545192/2022/3/25/626b0419-cbb0-4200-8490-67e20a0021c51648208612203-Roadster-Men-Green--White-Printed-Round-Neck-Pure-Cotton-T-s-1.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11545192/2022/3/25/2094dc05-e8c0-4f22-b142-66b29a59895c1648208612193-Roadster-Men-Green--White-Printed-Round-Neck-Pure-Cotton-T-s-2.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11545192/2022/3/25/2afc6904-e053-4190-8f04-308e3a458eac1648208612185-Roadster-Men-Green--White-Printed-Round-Neck-Pure-Cotton-T-s-3.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11545192/2022/3/25/a7d1f1a0-ff9c-4674-8980-ce7a1427bff21648208612165-Roadster-Men-Green--White-Printed-Round-Neck-Pure-Cotton-T-s-5.jpg"],
+    "brand": "ROADSTER",
+    "type": "Green White Printed Round Neck Pure Cotton",
+    "price": 299,
+    "stock": 2,
+    "sex": "M",
+    "dealer": "Vision Star"
+  },
+  
+  { 
+    "id": 3,
+    "hlink": ["https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/11545304/2020/7/10/4b821c42-dc9e-462a-89a8-10ac8779b9291594373008093-Roadster-Men-Tshirts-1651594373006324-1.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11545304/2020/7/10/2a8bbfc2-38eb-401c-86cb-4568e0341d661594373008004-Roadster-Men-Tshirts-1651594373006324-2.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11545304/2020/7/10/28ea2af1-38e3-41c6-886b-ad7070ef23511594373007949-Roadster-Men-Tshirts-1651594373006324-3.jpg", "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11545304/2020/7/10/ba269490-06c8-475d-a8f8-25738b10e1381594373007807-Roadster-Men-Tshirts-1651594373006324-5.jpg"],
+    "brand": "ROADSTER",
+    "type": "Black Printed Round Neck Pure Cotton",
+    "price": 839,
+    "stock": 8,
+    "sex": "M",
+    "dealer": "AJIO"
+  }
+]

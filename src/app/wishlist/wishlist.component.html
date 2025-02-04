@@ -1,0 +1,15 @@
+<div class="wishlist-page">
+  <p class="wishlist-head"><b>My Wishlist</b> <span style="font-size: 15px; color: grey;"> ({{ wishlistService.wishlist().length }}) items</span></p>
+
+  <div class="content">
+    @for (i of wishlistService.wishlist(); track i.id) {
+      @defer (on viewport) {
+        <app-all-products [item]="i.id" />
+      } @placeholder {
+        <p></p>
+      } @loading (minimum 0.1s) {
+        <p>Loading...</p>
+      }
+    }
+  </div>
+</div>

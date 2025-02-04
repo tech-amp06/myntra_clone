@@ -1,0 +1,183 @@
+.product {
+  vertical-align: top;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  top: 0;
+}
+
+.item-image-div {
+  height: 430px;
+  margin-top: 130px;
+  margin-left: 50px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.item-image {
+  height: 100%;
+  margin: 5px;
+}
+
+.description {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin-right: 50px;
+}
+
+.about {
+  flex: 1;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(192, 192, 192);
+  border-bottom-width: 1px;
+}
+  .brand {
+    margin: 5px;
+    font-size: 35px;
+    color: rgb(48, 48, 48);
+  }
+  .type {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .rating {
+    font-family: Roboto;
+    margin: 5px;
+    margin-top: 15px;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: rgb(234, 234, 234);
+    width: max-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 25px;
+  }
+    .sub-rating {
+      color: grey;
+    }
+
+.price-div {
+  flex: 1;
+}
+  .price {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+  .mrp {
+    color: grey;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .offer {
+    color: rgb(255, 141, 54);
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .tax {
+    color: green;
+    font-size: small;
+    font-weight: bold;
+    margin: 5px;
+    margin-top: 15px;
+  }
+
+.sizes {
+  flex: 1;
+  margin: 5px;
+}
+  .select-size {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+  }
+  .size-button {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+    border-color: grey;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .size-button:hover {
+    cursor: pointer;
+  }
+  .size-button:active {
+    border-color: rgb(255, 85, 113);
+    color: rgb(255, 85, 113);
+  }
+
+.bags {
+  flex: 1;
+}
+  .add-to-bag {
+    background-color: rgb(255, 85, 113);
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .add-to-bag:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .add-to-bag:active {
+    opacity: 0.8;
+  }
+
+  .add-to-bag-oos {
+    height: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(196, 196, 196);
+    border-radius: 4px;
+    width: 200px;
+    margin: 5px;
+    margin-top: 10px;
+    color: grey;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .wish {
+    background-color: white;
+    height: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(196, 196, 196);
+    width: 200px;
+    margin: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .wish:hover {
+    border-color: grey;
+    cursor: pointer;
+  }
+  .wish:active {
+    opacity: 0.8;
+  }
+
+.misc-div {
+  margin: 5px;
+  margin-top: 40px;
+}
+  .misc {
+    font-size: 15px;
+    margin: 5px;
+    margin-top: 8px;
+    color: grey;
+  }

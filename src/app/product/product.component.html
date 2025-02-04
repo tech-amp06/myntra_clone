@@ -1,0 +1,46 @@
+<div class="product">
+  <div class="item-image-div">
+    <img class="item-image" src="{{ product.hlink[0] }}">
+    <img class="item-image" src="{{ product.hlink[1] }}">
+    <img class="item-image" src="{{ product.hlink[2] }}">
+    <img class="item-image" src="{{ product.hlink[3] }}">
+
+  </div>
+
+  <div class="description">
+    <div class="about">
+      <p class="brand">{{ product.brand }}</p>
+      <p class="type">{{ product.type }}</p>
+      <p class="rating">4.2 ★ <span class="sub-rating">| 1.5k Ratings</span></p>
+    </div>
+
+    <div class="price-div">
+      <p class="price">₹{{ product.price }} &nbsp;<span class="mrp">MRP <s>₹1099</s></span>&nbsp;<span class="offer"> ({{ (1099 - product.price) * 100 / 1099 | number:'1.0-0' }}% OFF)</span></p>
+      <p class="tax">inclusive of all taxes</p>
+    </div>
+
+    <div class="sizes">
+      <p class="select-size">SELECT SIZE <span [style]="styles">Choose size!</span></p>
+
+      <button class="size-button" id="btnXS" (click)="handleSizeSelection('btnXS', 'XS')">XS</button>
+      <button class="size-button" id="btnS" (click)="handleSizeSelection('btnS', 'S')">S</button>
+      <button class="size-button" id="btnM" (click)="handleSizeSelection('btnM', 'M')">M</button>
+      <button class="size-button" id="btnL" (click)="handleSizeSelection('btnL', 'L')">L</button>
+      <button class="size-button" id="btnXL" (click)="handleSizeSelection('btnXL', 'XL')">XL</button>
+    </div>
+    <div class="bags">
+      @if (product.stock) {
+        <button class="add-to-bag" (click)="handleCartFunction(product)">{{ isInCart }}</button>
+      } @else {
+        <button class="add-to-bag-oos">OUT OF STOCK</button>
+      }
+      <button class="wish" (click)="handleWishlistFunction(product)">{{ isWishlisted }}</button>
+
+      <div class="misc-div">
+        <p class="misc">100% Original Products</p>
+        <p class="misc">Pay on delivery might be available</p>
+        <p class="misc">Easy 14 days returns and exchanges</p>
+      </div>
+    </div>
+  </div>
+</div>

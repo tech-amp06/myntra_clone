@@ -1,0 +1,74 @@
+.order-total {
+  border-style: solid;
+  border-color: rgb(203, 203, 203);
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 10px;
+  margin: 10px;
+}
+  
+  .invoice-details {
+    font-size: 14px;
+    font-family: Roboto;
+    color: rgb(57, 57, 57);
+  }
+  
+  .price-details {
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: bold;
+    color: rgb(57, 57, 57);
+  }
+  
+  .invoice {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(203, 203, 203);
+  }
+  
+  .value {
+    text-align: right;
+  }
+  
+  .discount {
+    font-size: 14px;
+    color: rgb(0, 180, 0);
+  }
+  
+  .shipping {
+    font-family: Roboto;
+    font-size: 14px;
+    color: rgb(57, 57, 57);
+  }
+  
+  .final {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .total {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .gross {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .place-order {
+    background-color: rgb(255, 85, 113);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+  }
+  .place-order:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }

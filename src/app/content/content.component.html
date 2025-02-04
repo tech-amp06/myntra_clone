@@ -1,0 +1,80 @@
+<div class="sidebar" style="overflow-y: scroll; height:530px;">
+  
+  <div class="title">
+    <p class="filters">FILTERS</p>
+  </div>
+
+  <div>
+    <div class="cat">
+      <p class="filter-head">CATEGORIES</p>
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">Tshirts</span>
+      </label>
+
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">Lounge Tshirts</span>
+      </label>
+
+      <p class="filter-head">BRAND</p>
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">Roadster</span>
+      </label>
+
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">Friskers</span>
+      </label>
+
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">DIFFXRXNCE</span>
+      </label>
+
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">HERE&NOW</span>
+      </label>
+
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">CHKOKKO</span>
+      </label>
+
+      <label class="main"> 
+        <input type="checkbox">
+        <span class="checkbox-container">MAST & HARBOUR</span>
+      </label>
+
+      <p class="filter-head">SEX</p>
+
+      <label class="main">
+        <input type="checkbox">
+        <span class="checkbox-container">Male</span>
+      </label>
+
+      <label class="main">
+        <input type="checkbox">
+        <span class="checkbox-container">Female</span>
+      </label>
+        
+      <p class="filter-head">PRICE</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  @for (product of products(); track product.hlink; let i = $index) {
+    @defer (on viewport) {
+      <app-all-products [item]="i" />
+    } @placeholder {
+      <p></p>
+    } @loading (minimum 0.1s) {
+      <p>Loading...</p>
+    }
+  }
+</div>
+
+<router-outlet></router-outlet>

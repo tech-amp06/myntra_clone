@@ -1,0 +1,101 @@
+.background {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 100px;
+  font-family: Roboto Condensed;
+  grid-template-columns: 1fr 1fr;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(219, 219, 219);
+  border-radius: 5px;
+  height: 586px;
+}
+
+.account {
+  height: 40px;
+  border-bottom-color: rgb(219, 219, 219);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 20px;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 19px;
+  padding: 0;
+  margin: 0;
+}
+
+.cont {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  margin-top: 3px;
+}
+
+.holders {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.profile-sidebar {
+  padding-left: 20px;
+  padding-top: 15px;
+  border-right-color: rgb(219, 219, 219);
+  border-right-width: 1px;
+  border-right-style: solid;
+  height: 490px;
+}
+
+.profile-details {
+  border-style: solid;
+  border-color: rgb(219, 219, 219);
+  border-width: 1px;
+  margin: 10px;
+  height: 483px;
+}
+
+.profile-head {
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 20px;
+  border-bottom-color: rgb(219, 219, 219);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.details {
+  margin-left: 100px;
+  margin-right: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 350px;
+}
+
+.details-head, .details-info {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.sidebar-options {
+  margin-top: 7px;
+  color: rgb(108, 108, 108);
+}
+
+.edit {
+  background-color: rgb(255, 85, 113);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  width: 90%;
+  bottom: 20px;
+  margin-left: 32px;
+}
+.edit:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
