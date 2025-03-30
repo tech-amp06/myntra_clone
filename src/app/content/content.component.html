@@ -7,60 +7,32 @@
   <div>
     <div class="cat">
       <p class="filter-head">CATEGORIES</p>
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">Tshirts</span>
-      </label>
-
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">Lounge Tshirts</span>
-      </label>
+      <section class="checkbox-section">
+        <mat-checkbox class="checkbox-margin">Tshirts</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">Lounge Tshirts</mat-checkbox>
+      </section>
 
       <p class="filter-head">BRAND</p>
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">Roadster</span>
-      </label>
 
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">Friskers</span>
-      </label>
-
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">DIFFXRXNCE</span>
-      </label>
-
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">HERE&NOW</span>
-      </label>
-
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">CHKOKKO</span>
-      </label>
-
-      <label class="main"> 
-        <input type="checkbox">
-        <span class="checkbox-container">MAST & HARBOUR</span>
-      </label>
+      <section class="checkbox-section">
+        <mat-checkbox class="checkbox-margin">Roadster</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">DIFFXRXNCE</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">Friskers</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">HERE&NOW</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">CHKOKKO</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">MAST & HARBOUR</mat-checkbox>
+      </section>
 
       <p class="filter-head">SEX</p>
 
-      <label class="main">
-        <input type="checkbox">
-        <span class="checkbox-container">Male</span>
-      </label>
-
-      <label class="main">
-        <input type="checkbox">
-        <span class="checkbox-container">Female</span>
-      </label>
+      <section class="checkbox-section">
+        <mat-checkbox class="checkbox-margin">Male</mat-checkbox>
+        <mat-checkbox class="checkbox-margin">Female</mat-checkbox>
+      </section>
         
       <p class="filter-head">PRICE</p>
+
+      <p></p>
     </div>
   </div>
 </div>
@@ -70,9 +42,13 @@
     @defer (on viewport) {
       <app-all-products [item]="i" />
     } @placeholder {
-      <p></p>
-    } @loading (minimum 0.1s) {
-      <p>Loading...</p>
+      <div class="loading">
+        <!-- pass -->
+      </div>
+    } @loading (minimum 1s) {
+      <div class="loading">
+        <!-- pass -->
+      </div>
     }
   }
 </div>

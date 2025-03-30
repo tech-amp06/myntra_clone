@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnInit, Renderer2 } from '@angular/core';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import data from '../../assets/products.json';
 import { DecimalPipe } from '@angular/common';
@@ -61,6 +61,7 @@ export class ProductComponent implements OnInit {
         this.styles = {...this.styles, color: 'rgb(255, 85, 113)'};
       } else {
         this.styles = {...this.styles, color: 'white'};
+        this.product.size = this.sizeSelected;
         this.cartService.addToCart(product);
         this.isInCart = 'GO TO BAG ➡';
       }
@@ -90,7 +91,5 @@ export class ProductComponent implements OnInit {
     this.renderer.setStyle(element, 'color', 'rgb(255, 85, 113)');
 
     this.prevElement = element;
-
-    this.product.size = size;
   }
 }

@@ -5,11 +5,11 @@ import { Product } from '../../assets/products.model';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { CartItems } from '../../assets/cartItems.model';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-cart-item',
-  imports: [MatFormFieldModule, MatSelectModule, MatInputModule],
+  imports: [MatFormFieldModule, MatSelectModule, MatInputModule, MatButtonModule],
   templateUrl: './cart-item.component.html',
   styleUrl: './cart-item.component.scss'
 })

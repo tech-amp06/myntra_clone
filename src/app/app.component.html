@@ -4,8 +4,8 @@
   </div>
 
   <div class="categories">
-    <button class="categories-button">MEN</button>
-    <button class="categories-button">WOMEN</button>
+    <button class="categories-button" (click)="toFilter('M')">MEN</button>
+    <button class="categories-button" (click)="toFilter('F')">WOMEN</button>
     <button class="categories-button">KIDS</button>
     <button class="categories-button" style="width: 100px">HOME & LIVING</button>
     <button class="categories-button">BEAUTY</button>
@@ -38,5 +38,7 @@
     </div>
   </div>
 </div>
+
+<!-- <app-content [filterSex]="sexFilter" [hidden]="toBeRedirected"></app-content> -->
 
 <router-outlet></router-outlet>

@@ -17,27 +17,39 @@ export class AppComponent implements OnInit {
   constructor (
     private router : Router
   ) {}
+
+  sexFilter: string = '';
+  toBeRedirected = 1;
   
   cartService = inject(CartService);
   search_val: string = '';
 
   ngOnInit(): void {
     this.router.navigate(['content']);  
+    this.toBeRedirected = 0;
   }
 
   onCartOpen() {
     this.router.navigate(['cart']);
+    this.toBeRedirected = 0;
   }
 
   goToProfile() {
     this.router.navigate(['profile']);
+    this.toBeRedirected = 0;
   }
 
   goToHome() {
+    this.toBeRedirected = 0;
     this.router.navigate(['']);
   }
 
   goToWishlist() {
     this.router.navigate(['wishlist']);
+    this.toBeRedirected = 0;
+  }
+
+  toFilter(filter: string) {
+    this.sexFilter = filter;
   }
 }

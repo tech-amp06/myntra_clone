@@ -22,7 +22,7 @@ export class CartService {
 
     if (index !== -1) {
       this.cart()[index].quantity += 1;
-      this.totalPrice = this.cart()[index].price * this.cart()[index].quantity;
+      this.totalPrice += this.cart()[index].price;
 
       this.miscCalculation();
 
@@ -35,8 +35,6 @@ export class CartService {
 
     this.totalPrice += this.cart()[this.cart().length - 1].price;
     this.miscCalculation();
-
-    console.log(product);
   }
 
   removeFromCart(id: number) {
