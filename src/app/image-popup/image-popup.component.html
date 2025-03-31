@@ -1,0 +1,12 @@
+<div class="popup">
+  <img class="product-image" src="{{ product.hlink[index] }}" alt="onview">
+  <img class="nav left" src="https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png" alt="left" (click)="index = (index + 1) % 4;">
+  <img class="nav right" src="https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png" alt="right" (click)="index = (index + 1) % 4;">
+
+  <div class="quick-select">
+    <img src="{{ product.hlink[0] }}" alt="thumb" (click)="index = 0">
+    <img src="{{ product.hlink[1] }}" alt="material" (click)="index = 1">
+    <img src="{{ product.hlink[2] }}" alt="buffer1" (click)="index = 2">
+    <img src="{{ product.hlink[3] }}" alt="buffer2" (click)="index = 3">
+  </div>
+</div>

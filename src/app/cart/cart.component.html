@@ -18,11 +18,19 @@
   
     <div class="orders">
       <div>
-        <div class="address-div">
-          <p>Delivered to: <b>Michael</b></p>
-          <p>{{ userAddress }}</p>
-          <button class="change-address">CHANGE ADDRESS</button>
-        </div>
+        @if (!User.isLoggedIn) {
+          <div class="address-div">
+            <p>Login to choose address</p>
+            <button class="utility-btn">LOGIN</button>
+          </div>
+        }
+        @else {
+          <div class="address-div">
+            <p>Delivering to: <b>{{ userDetails.details.name }}</b></p>
+            <p>{{ userDetails.details.location }}</p>
+            <button class="utility-btn">CHANGE ADDRESS</button>
+          </div>
+        }
         
         <div class="added-product">
           @for (item of inCart; track item.id; let i = $index) {
@@ -30,8 +38,8 @@
               <app-cart-item [item]="i"></app-cart-item>
             } @placeholder {
               <p></p>
-            } @loading (minimum 0.5s) {
-              <p>Loading...</p>
+            } @loading (minimum 2s) {
+              <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
             }
           }
         </div>

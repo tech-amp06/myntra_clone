@@ -1,53 +1,18 @@
 <div class="sidebar" style="overflow-y: scroll; height:530px;">
-  
-  <div class="title">
-    <p class="filters">FILTERS</p>
-  </div>
-
-  <div>
-    <div class="cat">
-      <p class="filter-head">CATEGORIES</p>
-      <section class="checkbox-section">
-        <mat-checkbox class="checkbox-margin">Tshirts</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">Lounge Tshirts</mat-checkbox>
-      </section>
-
-      <p class="filter-head">BRAND</p>
-
-      <section class="checkbox-section">
-        <mat-checkbox class="checkbox-margin">Roadster</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">DIFFXRXNCE</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">Friskers</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">HERE&NOW</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">CHKOKKO</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">MAST & HARBOUR</mat-checkbox>
-      </section>
-
-      <p class="filter-head">SEX</p>
-
-      <section class="checkbox-section">
-        <mat-checkbox class="checkbox-margin">Male</mat-checkbox>
-        <mat-checkbox class="checkbox-margin">Female</mat-checkbox>
-      </section>
-        
-      <p class="filter-head">PRICE</p>
-
-      <p></p>
-    </div>
-  </div>
+  <app-sidebar />
 </div>
 
 <div class="content">
-  @for (product of products(); track product.hlink; let i = $index) {
+  @for (product of products; track product.id; let i = $index) {
     @defer (on viewport) {
       <app-all-products [item]="i" />
     } @placeholder {
       <div class="loading">
-        <!-- pass -->
+        <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
       </div>
-    } @loading (minimum 1s) {
+    } @loading (minimum 0.5s) {
       <div class="loading">
-        <!-- pass -->
+        <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
       </div>
     }
   }

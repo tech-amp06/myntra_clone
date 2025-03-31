@@ -7,15 +7,16 @@
 
 .item-image-div {
   height: 430px;
-  margin-top: 130px;
-  margin-left: 50px;
-  margin-right: 20px;
+  margin: 130px 20px 0 50px;
   display: inline-block;
 }
 
 .item-image {
   height: 100%;
   margin: 5px;
+}
+.item-image:hover {
+  cursor: pointer;
 }
 
 .description {
@@ -181,3 +182,25 @@
     margin-top: 8px;
     color: grey;
   }
+
+.image-popup {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 20px;
+  z-index: 20;
+}
+.close:hover {
+  cursor: pointer;
+}

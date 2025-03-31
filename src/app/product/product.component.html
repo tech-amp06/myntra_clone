@@ -1,10 +1,9 @@
 <div class="product">
   <div class="item-image-div">
-    <img class="item-image" src="{{ product.hlink[0] }}">
-    <img class="item-image" src="{{ product.hlink[1] }}">
-    <img class="item-image" src="{{ product.hlink[2] }}">
-    <img class="item-image" src="{{ product.hlink[3] }}">
-
+    <img class="item-image" src="{{ product.hlink[0] }}" (click)="showPopup(0)">
+    <img class="item-image" src="{{ product.hlink[1] }}" (click)="showPopup(1)">
+    <img class="item-image" src="{{ product.hlink[2] }}" (click)="showPopup(2)">
+    <img class="item-image" src="{{ product.hlink[3] }}" (click)="showPopup(3)">
   </div>
 
   <div class="description">
@@ -43,4 +42,12 @@
       </div>
     </div>
   </div>
+
+  @if (popup()) {
+    <div class="image-popup">
+      <img class="close" src="https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=close" alt="close" (click)="closePopup()">
+
+      <app-image-popup [product]="product" />
+    </div>
+  }
 </div>

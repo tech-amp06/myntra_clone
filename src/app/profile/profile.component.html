@@ -1,7 +1,15 @@
 <div class="background">
   <div class="account">
-    <p class="main-heading">Account</p>
-    <p class="cont">Michael</p>
+    <div class="account-holder">
+      <p class="main-heading">Account</p>
+      <p class="cont">{{ userDetails.details.name }}</p>
+    </div>
+
+    <div class="logout">
+      <button  style="text-align: right;" mat-stroked-button (click)="logout()" aria-label="Show an example snack-bar">
+        Logout
+      </button>
+    </div>
   </div>
   <div class="holders">
     <div class="profile-sidebar">
@@ -12,37 +20,57 @@
       <p class="sidebar-options">MynCash</p>
       <p class="sidebar-options">Profile</p>
       <p class="sidebar-options">Saved Cards</p>
-      <p class="sidebar-options">Saved UPI</p>
       <p class="sidebar-options">Saved Wallets</p>
       <p class="sidebar-options">Addresses</p>
       <p class="sidebar-options">Myntra Insider</p>
-      <p class="sidebar-options">Delete Account</p>
       <p class="sidebar-options">Terms and Conditions</p>
+      <p class="sidebar-options">Delete Account</p>
+      <p class="sidebar-options" (click)="logout()">Logout</p>
     </div>
     <div class="profile-details">
       <div class="profile-head">
         <p class="main-heading">Profile Details</p>
       </div>
+
       <div class="details">
-        <div class="details-head">
+        <div>
           <p>Full Name</p>
-          <p>Mobile Number</p>
-          <p>Email ID</p>
-          <p>Gender</p>
-          <p>Date of Birth</p>
-          <p>Location</p>
-          <p>Alternate Mobile Number</p>
-          <p>Hint name</p>
+          <p>{{ userDetails.details.name }}</p>
         </div>
-        <div class="details-info">
-          <p>Michael</p>
-          <p>9014714939</p>
-          <p>pamruth09&#64;gmail.com</p>
-          <p>male</p>
-          <p>22-02-2006</p>
-          <p>- not added -</p>
-          <p>9949852292</p>
-          <p>- not added -</p>
+
+        <div>
+          <p>Mobile Number</p>
+          <p>{{ userDetails.details.contact }}</p>
+        </div>
+
+        <div>
+          <p>Email ID</p>
+          <p>{{ userDetails.emailAddress }}</p>
+        </div>
+
+        <div>
+          <p>Gender</p>
+          <p>{{ userDetails.details.sex == "M" ? "male" : "female" }}</p>
+        </div>
+
+        <div>
+          <p>Date of Birth</p>
+          <p>{{ userDetails.details['DOB'] }}</p>
+        </div>
+
+        <div>
+          <p>Location</p>
+          <p>{{ userDetails.details.location }}</p>
+        </div>
+
+        <div>
+          <p>Alternate Mobile Number</p>
+          <p>{{ userDetails.details.altContact }}</p>
+        </div>
+
+        <div>
+          <p>Hint name</p>
+          <p>{{ userDetails.details.hintName == "-" ? "- not added -" : userDetails.details.hintName }}</p>
         </div>
       </div>
       <button class="edit">EDIT</button>

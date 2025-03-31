@@ -5,6 +5,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { Router, RouterOutlet } from '@angular/router';
 import { CartService } from './services/cart.service';
 import { MatBadgeModule } from '@angular/material/badge';
+import { FiltersService } from './services/filters.service';
+import { UserDetailsService } from './services/user-details.service';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +20,12 @@ export class AppComponent implements OnInit {
     private router : Router
   ) {}
 
+  userDetails = inject(UserDetailsService);
+  filters = inject(FiltersService);
+  cartService = inject(CartService);
+
   sexFilter: string = '';
   toBeRedirected = 1;
-  
-  cartService = inject(CartService);
   search_val: string = '';
 
   ngOnInit(): void {
@@ -35,12 +39,18 @@ export class AppComponent implements OnInit {
   }
 
   goToProfile() {
-    this.router.navigate(['profile']);
+    if (this.userDetails.isLoggedIn) {
+      this.router.navigate(['profile']);
+    } else {
+      this.router.navigate(['login-page']);
+    }
     this.toBeRedirected = 0;
   }
 
   goToHome() {
     this.toBeRedirected = 0;
+    this.filters.appliedFilters().sex = [];
+    this.filters.appliedFilters().brand = [];
     this.router.navigate(['']);
   }
 
@@ -50,6 +60,7 @@ export class AppComponent implements OnInit {
   }
 
   toFilter(filter: string) {
-    this.sexFilter = filter;
+    this.filters.appliedFilters().sex = [filter];
+    this.router.navigate(['']);
   }
 }

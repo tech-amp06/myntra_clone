@@ -5,6 +5,7 @@ import { ContentComponent } from './content/content.component';
 import { ProductComponent } from './product/product.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'wishlist',
     component: WishlistComponent
+  },
+  {
+    path: 'login-page',
+    component: LoginPageComponent
   }
 ];

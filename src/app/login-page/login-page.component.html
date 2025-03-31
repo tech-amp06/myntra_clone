@@ -1,0 +1,32 @@
+<div class="page">
+  <img class="bg-image" src="https://img.freepik.com/free-photo/clothes-laptop-bed-arrangement-high-angle_23-2149726124.jpg?semt=ais_hybrid" alt="background">
+
+  <div class="login">
+    <h1>Sign in</h1>
+
+    <div class="login-details">
+      <form>
+        <label>Enter username</label>
+        <input (change)="catchCredentials($event, 'u')" id="username" type="text">
+
+        <label>Enter password</label>
+        <input (change)="catchCredentials($event, 'p')" id="password" type="password">
+      </form>
+
+      <p class="others">Or Login/Signup With</p>
+
+      <div class="other-ways">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-logo-icon-download-in-svg-png-gif-file-formats--brands-pack-logos-icons-189824.png?f=webp&w=256" alt="google" />
+        <p>Sign in using Google account</p>
+      </div>
+
+      @if (!validCredentials) {
+        <p class='invalid-username'>Incorrect credentials</p>
+      }
+
+      <div class="submit">
+        <button mat-flat-button (click)="authProcedure()">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

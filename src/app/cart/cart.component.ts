@@ -3,16 +3,19 @@ import { CartItemComponent } from '../cart-item/cart-item.component';
 import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
 import { PriceDetailsComponent } from '../price-details/price-details.component';
+import { UserDetailsService } from '../services/user-details.service';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-cart',
-  imports: [CartItemComponent, PriceDetailsComponent],
+  imports: [CartItemComponent, PriceDetailsComponent, MatProgressBarModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
 
 export class CartComponent {
-  userAddress = '#416, Gayathri Residency, Shirdi Sai Nagar, Chaitanya Enclave, Manikonda, Hyderabad - 500089';
+  User = inject(UserDetailsService);
+  userDetails: any = this.User.userDetails;
 
   cartService = inject(CartService);
   inCart = this.cartService.cart();

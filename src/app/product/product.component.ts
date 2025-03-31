@@ -1,14 +1,15 @@
-import { Component, inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, inject, OnInit, Renderer2, signal } from '@angular/core';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import data from '../../assets/products.json';
 import { DecimalPipe } from '@angular/common';
 import { CartService } from '../services/cart.service';
 import { WishlistService } from '../services/wishlist.service';
 import { Product } from '../../assets/products.model';
+import { ImagePopupComponent } from '../image-popup/image-popup.component';
 
 @Component({
   selector: 'app-product',
-  imports: [RouterModule, DecimalPipe],
+  imports: [RouterModule, DecimalPipe, ImagePopupComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
@@ -33,6 +34,9 @@ export class ProductComponent implements OnInit {
   };
 
   element = document.getElementsByClassName('size-button');
+
+  popup = signal(false);
+  imageIndex: number = -1;
   
   constructor (
     private route: ActivatedRoute,
@@ -91,5 +95,15 @@ export class ProductComponent implements OnInit {
     this.renderer.setStyle(element, 'color', 'rgb(255, 85, 113)');
 
     this.prevElement = element;
+  }
+
+  showPopup(n: number) {
+    this.popup.set(true);
+    this.imageIndex = n;
+  }
+
+  closePopup() {
+    this.popup.set(false);
+    this.imageIndex = -1;
   }
 }

@@ -1,0 +1,41 @@
+[
+    {
+        "emailAddress" : "michael09@gmail.com",
+        "details" : {
+            "password" : "thisismichael",
+            "name" : "Michael",
+            "contact" : 9964829928,
+            "altContact": 8790879389,
+            "sex" : "M",
+            "DOB" : "24-09-1998",
+            "location" : "123, Beethoven, Binghamton, New York State",
+            "hintName" : "-"
+        }
+    },
+    {
+        "emailAddress": "sarah_walker22@gmail.com",
+        "details": {
+            "password": "sarahSecure99",
+            "name": "Sarah Walker",
+            "contact": 9876543210,
+            "altContact": 9123456789,
+            "sex": "F",
+            "DOB": "15-07-1995",
+            "location": "456, Maple Street, Austin, Texas",
+            "hintName": "My first pet's name"
+        }
+    },
+    {
+        "emailAddress": "john_doe88@yahoo.com",
+        "details": {
+            "password": "johnDoe@123",
+            "name": "John Doe",
+            "contact": 8765432198,
+            "altContact": 9988776655,
+            "sex": "M",
+            "DOB": "03-12-1992",
+            "location": "789, Sunset Boulevard, Los Angeles, California",
+            "hintName": "Favorite childhood book"
+        }
+    }
+]

@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import data from '../../assets/products.json';
+import { FiltersService } from '../services/filters.service';
 
 @Component({
   selector: 'app-all-products',
@@ -11,9 +11,10 @@ import data from '../../assets/products.json';
 export class AllProductsComponent implements OnInit {
   product: any = {};
   @Input() item: number = 0;
+  filters = inject(FiltersService)
 
   ngOnInit(): void {
-    this.product = data[this.item];
+    this.product = this.filters.resultData[this.item];
   }
 
   constructor (
@@ -21,6 +22,6 @@ export class AllProductsComponent implements OnInit {
   ) {}
 
   redirectToProduct() {
-    this.router.navigate(['/product'], { queryParams : { id : data[this.item].id } });
+    this.router.navigate(['/product'], { queryParams : { id : this.filters.resultData[this.item].id } });
   }
 }

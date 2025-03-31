@@ -1,0 +1,58 @@
+.sidebar {
+    position: fixed;
+    top: 99px;
+    width: 220px;
+    left: 0;
+    height: 100%;
+  }
+  
+  .title {
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 222, 222);
+    border-bottom-width: 1px;
+  }
+  
+  .filters {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  .main {
+    align-items: center;
+    display: block;
+    padding-top: 3px;
+  }
+  
+  .cat {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: Roboto, Arial;
+    font-size: 13px;
+  }
+  
+  .checkbox-container {
+    height: 12px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    color: rgb(74, 74, 74);
+  }
+  
+  input {
+    margin-right: 10px;
+    height: 12px;
+  }
+  
+  .filter-head {
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  
+  md-select.slide {
+    accent-color: orange;
+  }
+  
+  .checkbox-margin {
+    height: 28px;
+  }
