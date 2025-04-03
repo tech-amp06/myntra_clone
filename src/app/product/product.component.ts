@@ -2,7 +2,7 @@ import { Component, inject, OnInit, Renderer2, signal } from '@angular/core';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import data from '../../assets/products.json';
 import { DecimalPipe } from '@angular/common';
-import { CartService } from '../services/cart.service';
+import { UserDetailsService } from '../services/user-details.service';
 import { WishlistService } from '../services/wishlist.service';
 import { Product } from '../../assets/products.model';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
@@ -15,11 +15,12 @@ import { ImagePopupComponent } from '../image-popup/image-popup.component';
 })
 
 export class ProductComponent implements OnInit {
-  cartService = inject(CartService);
   wishlistService = inject(WishlistService);
+  userService = inject(UserDetailsService);
   
   id: number | null = null;
   products: any[] = [];
+  relatedProducts: any[] = [];
   product: any = {};
 
   isInCart = 'ADD TO BAG';
@@ -66,7 +67,7 @@ export class ProductComponent implements OnInit {
       } else {
         this.styles = {...this.styles, color: 'white'};
         this.product.size = this.sizeSelected;
-        this.cartService.addToCart(product);
+        this.userService.addToCart(product);
         this.isInCart = 'GO TO BAG ➡';
       }
     } else {

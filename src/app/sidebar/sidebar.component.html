@@ -1,6 +1,6 @@
 <div class="sidebar" style="overflow-y: scroll; height:530px;">
   <div class="title">
-    <p class="filters" (click)="goToLoginPage();">FILTERS</p>
+    <p class="filters">FILTERS</p>
   </div>
 
   <div>
@@ -14,9 +14,33 @@
       <p class="filter-head">BRAND</p>
 
       <section class="checkbox-section">
-        <mat-checkbox [checked]="brandFilterControl['Roadster']" id="1" class="checkbox-margin" (change)="handleBrandFilter('ROADSTER', $event.checked)">Roadster</mat-checkbox>
-        <mat-checkbox [checked]="brandFilterControl['DIFFXRXNCE']" id="2" class="checkbox-margin" (change)="handleBrandFilter('DIFFXRXNCE', $event.checked)">DIFFXRXNCE</mat-checkbox>
-        <mat-checkbox [checked]="brandFilterControl['Friskers']" id="3" class="checkbox-margin" (change)="handleBrandFilter('Friskers', $event.checked)">Friskers</mat-checkbox>
+        <mat-checkbox 
+          id="1" 
+          class="checkbox-margin" 
+          [checked]="brandFilterControl['Roadster']" 
+          (change)="handleBrandFilter('Roadster', $event.checked)"
+        >
+          Roadster
+        </mat-checkbox>
+
+        <mat-checkbox 
+          [checked]="brandFilterControl['DIFFXRXNCE']" 
+          id="2" 
+          class="checkbox-margin" 
+          (change)="handleBrandFilter('DIFFXRXNCE', $event.checked)"
+        >
+          DIFFXRXNCE
+        </mat-checkbox>
+        
+        <mat-checkbox 
+          [checked]="brandFilterControl['Friskers']" 
+          id="3" 
+          class="checkbox-margin" 
+          (change)="handleBrandFilter('Friskers', $event.checked)"
+        >
+          Friskers
+        </mat-checkbox>
+        
         <mat-checkbox [checked]="brandFilterControl['HERE&NOW']" id="" class="checkbox-margin" (change)="handleBrandFilter('HERE&NOW', $event.checked)">HERE&NOW</mat-checkbox>
         <mat-checkbox [checked]="brandFilterControl['CHKOKKO']" id="" class="checkbox-margin" (change)="handleBrandFilter('CHKOKKO', $event.checked)">CHKOKKO</mat-checkbox>
         <mat-checkbox [checked]="brandFilterControl['MAST & HARBOUR']" id="" class="checkbox-margin" (change)="handleBrandFilter('MAST & HARBOUR', $event.checked)">MAST & HARBOUR</mat-checkbox>
@@ -25,8 +49,8 @@
       <p class="filter-head">SEX</p>
 
       <section class="checkbox-section">
-        <mat-checkbox class="checkbox-margin" (change)="handleSexFilter('M')" [checked]="true">Male</mat-checkbox>
-        <mat-checkbox class="checkbox-margin" (change)="handleSexFilter('F')">Female</mat-checkbox>
+        <mat-checkbox class="checkbox-margin" (change)="handleSexFilter('M', $event.checked)" [checked]="true">Male</mat-checkbox>
+        <mat-checkbox class="checkbox-margin" (change)="handleSexFilter('F', $event.checked)">Female</mat-checkbox>
       </section>
         
       <p class="filter-head">PRICE</p>

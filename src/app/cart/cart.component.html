@@ -21,7 +21,7 @@
         @if (!User.isLoggedIn) {
           <div class="address-div">
             <p>Login to choose address</p>
-            <button class="utility-btn">LOGIN</button>
+            <button class="utility-btn" (click)="login()">LOGIN</button>
           </div>
         }
         @else {

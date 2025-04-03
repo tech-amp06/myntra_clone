@@ -1,5 +1,4 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { AllProductsComponent } from '../all-products/all-products.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { Router, RouterOutlet } from '@angular/router';
@@ -10,7 +9,7 @@ import Products from '../../assets/products.json';
 
 @Component({
   selector: 'app-content',
-  imports: [FormsModule, AllProductsComponent, SidebarComponent, RouterOutlet, MatCheckboxModule, MatProgressBarModule],
+  imports: [AllProductsComponent, SidebarComponent, RouterOutlet, MatCheckboxModule, MatProgressBarModule],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })
@@ -30,16 +29,6 @@ export class ContentComponent implements OnInit {
     "HERE&NOW": false,
     "CHKOKKO": false,
     "MAST & HARBOUR": false
-  }
-
-  handleFilterControl(brand: string) {
-    this.brandFilterControl[brand] = !this.brandFilterControl[brand];
-
-    if (this.brandFilterControl[brand]) {
-      this.filters.appliedFilters().brand.push(brand);
-      console.log(this.brandFilterControl);
-      this.router.navigate(['']);
-    }
   }
 
   ngOnInit(): void {

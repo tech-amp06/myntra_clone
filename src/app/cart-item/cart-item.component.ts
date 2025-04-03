@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from '../services/cart.service';
+import { UserDetailsService } from '../services/user-details.service';
 import { Product } from '../../assets/products.model';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
@@ -18,10 +18,10 @@ export class CartItemComponent {
     private router : Router
   ) {}
 
-  cartService = inject(CartService);
+  userService = inject(UserDetailsService)
   
   @Input() item: number = 0;
-  inCart: Product[] = this.cartService.cart();
+  inCart: Product[] = this.userService.cart();
 
   itemQuantity = 1;
 

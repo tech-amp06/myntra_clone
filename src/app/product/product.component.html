@@ -43,6 +43,14 @@
     </div>
   </div>
 
+  <div class="related-products">
+    @for (relatedProduct of relatedProducts; track $index) {
+      
+    }
+  </div>
+
+  <hr>
+
   @if (popup()) {
     <div class="image-popup">
       <img class="close" src="https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=close" alt="close" (click)="closePopup()">

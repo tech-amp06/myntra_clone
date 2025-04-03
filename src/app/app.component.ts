@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
 import { Router, RouterOutlet } from '@angular/router';
-import { CartService } from './services/cart.service';
 import { MatBadgeModule } from '@angular/material/badge';
 import { FiltersService } from './services/filters.service';
 import { UserDetailsService } from './services/user-details.service';
@@ -22,7 +21,6 @@ export class AppComponent implements OnInit {
 
   userDetails = inject(UserDetailsService);
   filters = inject(FiltersService);
-  cartService = inject(CartService);
 
   sexFilter: string = '';
   toBeRedirected = 1;

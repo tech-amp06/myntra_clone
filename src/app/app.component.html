@@ -24,7 +24,7 @@
       </button>
     </div>
     <div class="profile-div">
-      <button class="bag-button" matBadgeOverlap="true" (click)="onCartOpen()" matBadge="8" matBadgePosition="after" matBadge="{{ cartService.cart().length }}" matBadgeColor="warn">
+      <button class="bag-button" matBadgeOverlap="true" (click)="onCartOpen()" matBadge="8" matBadgePosition="after" matBadge="{{ userDetails.cart().length }}" matBadgeColor="warn">
         <img class="bag-icon" src="https://cdn-icons-png.flaticon.com/512/2662/2662503.png">
         <p class="user-p">Bag</p>
       </button>

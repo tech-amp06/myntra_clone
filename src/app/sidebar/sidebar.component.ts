@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FiltersService } from '../services/filters.service';
 import { Router } from '@angular/router';
+import { indexOf } from 'underscore';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,8 +15,10 @@ export class SidebarComponent {
     private router: Router
   ) {}
 
-  filters = inject(FiltersService);
+  filtersService = inject(FiltersService);
   
+  @Output() filterPass: any = new EventEmitter();
+
   brandFilterControl: any = {
     "Roadster": false,
     "DIFFXRXNCE": false,
@@ -30,33 +33,32 @@ export class SidebarComponent {
     "F": false,
   }
 
+  filter: any = {
+    brand: [],
+    sex: []
+  }
+
   handleBrandFilter(brand: string, checked: boolean) {
     this.brandFilterControl[brand] = checked;
-
-    if (this.brandFilterControl[brand]) {
-      this.filters.appliedFilters().brand.push(brand);
-      this.router.navigate(['']);
+    
+    if (checked) {
+      this.filter.brand.push(brand);
+    } else {
+      this.filter.brand.splice(this.filter.brand.indexOf(brand), 1);
     }
 
-    else {
-      this.filters.appliedFilters().brand.splice(this.filters.appliedFilters().brand.indexOf(brand), 1);
-      this.router.navigate(['']);
-    }
+    this.filterPass.emit(this.filter);
   }
 
-  handleSexFilter(sex: string) {
-    this.sexFilterControl[sex] = !this.sexFilterControl[sex];
-
-    if (this.sexFilterControl[sex]) {
-      this.filters.appliedFilters().sex.push(sex);
-      this.router.navigate(['']);
+  handleSexFilter(sex: string, checked: boolean) {
+    this.sexFilterControl[sex] = checked;
+    
+    if (checked) {
+      this.filter.sex.push(sex);
+    } else {
+      this.filter.sex.splice(this.filter.sex.indexOf(sex), 1);
     }
-    else {
-      // this.filters.appliedFilters().sex.splice()
-    }
-  }
 
-  goToLoginPage() {
-    this.router.navigate(['login-page']);
+    this.filterPass.emit(this.filter);
   }
 }

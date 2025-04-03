@@ -1,5 +1,5 @@
 import { Component, inject, Renderer2 } from '@angular/core';
-import { CartService } from '../services/cart.service';
+import { UserDetailsService } from '../services/user-details.service';
 import { DecimalPipe } from '@angular/common';
 
 @Component({
@@ -9,8 +9,8 @@ import { DecimalPipe } from '@angular/common';
   styleUrl: './price-details.component.scss'
 })
 export class PriceDetailsComponent {
-  cartService = inject(CartService);
-  inCart = this.cartService.cart();
+  userService = inject(UserDetailsService);
+  inCart = this.userService.cart();
   donated = 0;
 
   constructor (
@@ -39,7 +39,7 @@ export class PriceDetailsComponent {
       this.renderer.setStyle(temp, 'color', 'rgb(203, 203, 203)');
     }
 
-    this.cartService.handleDonation(amt);
+    this.userService.handleDonation(amt);
     const element = document.getElementById(id);
 
     this.renderer.setStyle(element, 'border-color', 'rgb(255, 85, 113)');
