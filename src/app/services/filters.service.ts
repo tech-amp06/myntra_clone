@@ -4,7 +4,7 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class FiltersService {
-  appliedFilters: any = signal({
+  appliedFilters = signal({
     sex: [] as string[],
     brand: [] as string[]
   });

@@ -9,10 +9,7 @@
             "sex" : "M",
             "DOB" : "24-09-1998",
             "location" : "123, Beethoven, Binghamton, New York State",
-            "hintName" : "-",
-            "inCart" : {
-                "id" : 2
-            }
+            "hintName" : "-"
         }
     },
     {
@@ -25,10 +22,7 @@
             "sex": "F",
             "DOB": "15-07-1995",
             "location": "456, Maple Street, Austin, Texas",
-            "hintName": "My first pet's name",
-            "inCart" : {
-                "id" : 3
-            }
+            "hintName": "My first pet's name"
         }
     },
     {
@@ -41,10 +35,7 @@
             "sex": "M",
             "DOB": "03-12-1992",
             "location": "789, Sunset Boulevard, Los Angeles, California",
-            "hintName": "Favorite childhood book",
-            "inCart" : {
-                "id" : 4
-            }
+            "hintName": "Favorite childhood book"
         }
     }
 ]

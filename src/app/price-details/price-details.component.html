@@ -22,15 +22,15 @@
       <p class="invoice-details">Social Work Donation</p>
     </div>
     <div class="value">
-      <p class="invoice-details"><b>₹{{ userService.totalPrice }}</b></p>
-      <p class="discount"><b>-₹{{ userService.discount | number: '1.0-0' }}</b></p>
-      <p class="invoice-details"><b>₹{{ userService.platformFee }}</b></p>
-      @if (userService.shippingFee == 0) {
+      <p class="invoice-details"><b>₹{{ cartService.totalPrice }}</b></p>
+      <p class="discount"><b>-₹{{ cartService.discount | number: '1.0-0' }}</b></p>
+      <p class="invoice-details"><b>₹{{ cartService.platformFee }}</b></p>
+      @if (cartService.shippingFee == 0) {
         <p class="free">FREE</p>
       } @else {
-        <p class="shipping"><b>₹{{ userService.shippingFee | number: '1.0-0' }}</b></p>
+        <p class="shipping"><b>₹{{ cartService.shippingFee | number: '1.0-0' }}</b></p>
       }
-      <p class="invoice-details"><b>₹{{ userService.donationAmount }}</b></p>
+      <p class="invoice-details"><b>₹{{ cartService.donationAmount }}</b></p>
     </div>
   </div>
 
@@ -39,7 +39,7 @@
       <p class="total">Total Amount</p>
     </div>
     <div class="gross-div">
-      <p class="gross">₹{{ userService.gross | number: '1.0-0' }}</p>
+      <p class="gross">₹{{ cartService.gross | number: '1.0-0' }}</p>
     </div>
   </div>
   
